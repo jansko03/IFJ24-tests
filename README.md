@@ -106,7 +106,7 @@ projekt/
 └── test.sh              # Testovací skript
 ```
 
-## Autory
+## Autori
 
 - Filip Novák [@fifixsandy] (https://github.com/fifixsandy)
 - Ján Skovajsa [@jansko03]
