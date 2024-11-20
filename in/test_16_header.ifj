@@ -1,0 +1,1 @@
+cost ifj = @import("ifj24.zig");

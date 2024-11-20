@@ -1,0 +1,212 @@
+.IFJcode24
+DEFVAR GF@retval
+JUMP $main
+
+
+
+#Build-in fucntion ifj.substring
+LABEL $$substring
+PUSHFRAME
+CREATEFRAME
+MOVE GF@retval nil@nil
+DEFVAR TF@char
+DEFVAR TF@len_str
+DEFVAR TF@end_cond
+STRLEN TF@len_str LF@%0
+GT TF@end_cond LF@%1 TF@len_str
+JUMPIFEQ $$substring-end TF@end_cond bool@true
+EQ TF@end_cond LF@%1 TF@len_str
+JUMPIFEQ $$substring-end TF@end_cond bool@true
+GT TF@end_cond LF@%2 TF@len_str
+JUMPIFEQ $$substring-end TF@end_cond bool@true
+LT TF@end_cond LF@%1 int@0
+JUMPIFEQ $$substring-end TF@end_cond bool@true
+LT TF@end_cond LF@%2 int@0
+JUMPIFEQ $$substring-end TF@end_cond bool@true
+GT TF@end_cond LF@%1 LF@%2
+JUMPIFEQ $$substring-end TF@end_cond bool@true
+MOVE GF@retval string@
+DEFVAR TF@i
+MOVE TF@i LF@%1
+LABEL $$substring-while-start-1
+EQ TF@end_cond TF@i LF@%2
+JUMPIFEQ $$substring-while-end-1 TF@i LF@%2
+GETCHAR TF@char LF@%0 TF@i
+CONCAT GF@retval GF@retval TF@char
+ADD TF@i TF@i int@1
+JUMP $$substring-while-start-1
+LABEL $$substring-while-end-1
+LABEL $$substring-end
+POPFRAME
+RETURN
+
+LABEL $$strcmp
+PUSHFRAME
+CREATEFRAME
+DEFVAR TF@len_str1
+DEFVAR TF@len_str2
+DEFVAR TF@min_len
+DEFVAR TF@bool_tmp
+MOVE GF@retval int@0
+STRLEN TF@len_str1 LF@%0
+STRLEN TF@len_str2 LF@%1
+GT TF@bool_tmp TF@len_str1 TF@len_str2
+JUMPIFEQ $$strcmp-if-else-1 TF@bool_tmp bool@false
+MOVE TF@min_len TF@len_str2
+JUMP $$strcmp-if-end-1
+LABEL $$strcmp-if-else-1
+MOVE TF@min_len TF@len_str1
+JUMPIFEQ $$strcmp-end TF@len_str2 int@0
+LABEL $$strcmp-if-end-1
+DEFVAR TF@ascii1
+DEFVAR TF@ascii2
+DEFVAR TF@i
+MOVE TF@i int@0
+LABEL $$strcmp-while-start-1
+JUMPIFEQ $$strcmp-while-end-1 TF@min_len TF@i
+STRI2INT TF@ascii1 LF@%0 TF@i
+STRI2INT TF@ascii2 LF@%1 TF@i
+JUMPIFEQ $$strcmp-if-else-2 TF@ascii1 TF@ascii2
+GT TF@bool_tmp TF@ascii1 TF@ascii2
+JUMPIFEQ $$strcmp-if-else-3 TF@bool_tmp bool@true
+MOVE GF@retval int@-1
+JUMP $$strcmp-if-end-3
+LABEL $$strcmp-if-else-3
+MOVE GF@retval int@1
+LABEL $$strcmp-if-end-3
+JUMP $$strcmp-end
+LABEL $$strcmp-if-else-2
+ADD TF@i TF@i int@1
+JUMP $$strcmp-while-start-1
+LABEL $$strcmp-while-end-1
+JUMPIFEQ $$strcmp-end TF@len_str1 TF@len_str2
+GT TF@bool_tmp TF@len_str1 TF@len_str2
+JUMPIFEQ $$strcmp-if-else-4 TF@bool_tmp bool@false
+MOVE GF@retval int@1
+JUMP $$strcmp-if-end-4
+LABEL $$strcmp-if-else-4
+MOVE GF@retval int@-1
+LABEL $$strcmp-if-end-4
+LABEL $$strcmp-end
+POPFRAME
+RETURN
+
+LABEL $$ord
+PUSHFRAME
+CREATEFRAME
+DEFVAR TF@len_str
+DEFVAR TF@bool_tmp
+MOVE GF@retval int@0
+LT TF@bool_tmp LF@%1 int@0
+JUMPIFEQ $$ord-end TF@bool_tmp bool@true
+JUMPIFEQ $$ord-end LF@%0 string@
+STRLEN TF@len_str LF@%0
+SUB TF@len_str TF@len_str int@1
+GT TF@bool_tmp LF@%1 TF@len_str
+JUMPIFEQ $$ord-end TF@bool_tmp bool@true
+STRI2INT GF@retval LF@%0 LF@%1
+LABEL $$ord-end
+POPFRAME
+RETURN
+
+LABEL $main
+CREATEFRAME
+DEFVAR TF@tmp_bool
+DEFVAR TF@%0
+DEFVAR TF@_strcmpResult
+DEFVAR TF@_abcdefgh
+DEFVAR TF@_inpOK
+DEFVAR TF@_all
+DEFVAR TF@_newInput
+DEFVAR TF@%1
+DEFVAR TF@_str2
+DEFVAR TF@_str1
+PUSHS string@Toto\032je\032nejaky\032text\032v\032programu\032jazyka\032IFJ24
+POPS GF@retval
+PUSHS GF@retval
+POPS TF@_str1
+PUSHS string@,\032ktery\032jeste\032trochu\032obohatime
+POPS GF@retval
+PUSHS GF@retval
+POPS TF@_str2
+PUSHS TF@_str1
+POPS GF@retval
+MOVE TF@%1 GF@retval
+PUSHS TF@_str2
+POPS GF@retval
+CONCAT GF@retval TF@%1 GF@retval
+PUSHS GF@retval
+POPS TF@_str2
+PUSHS TF@_str1
+POPS GF@retval
+WRITE GF@retval
+PUSHS string@\010
+POPS GF@retval
+WRITE GF@retval
+PUSHS TF@_str2
+POPS GF@retval
+WRITE GF@retval
+PUSHS string@\010
+POPS GF@retval
+WRITE GF@retval
+PUSHS string@Zadejte\032serazenou\032posloupnost\032vsech\032malych\032pismen\032a-h,\032
+POPS GF@retval
+WRITE GF@retval
+READ GF@retval string
+PUSHS GF@retval
+POPS TF@_newInput
+PUSHS string@
+POPS GF@retval
+PUSHS GF@retval
+POPS TF@_all
+LABEL &while-cond-1
+PUSHS TF@_newInput
+POPS TF@_inpOK
+JUMPIFEQ &while-end-1 nil@nil TF@_inpOK
+PUSHS string@abcdefgh
+POPS GF@retval
+PUSHS GF@retval
+POPS TF@_abcdefgh
+PUSHS TF@_inpOK
+POPS TF@%0
+PUSHS TF@_abcdefgh
+POPS TF@%1
+CALL $$strcmp
+PUSHS GF@retval
+POPS TF@_strcmpResult
+PUSHS TF@_strcmpResult
+PUSHS int@0
+EQS
+POPS TF@tmp_bool
+JUMPIFNEQ &if-else-2 TF@tmp_bool bool@true
+PUSHS string@Spravne\032zadano!\010
+POPS GF@retval
+WRITE GF@retval
+PUSHS TF@_all
+POPS GF@retval
+WRITE GF@retval
+PUSHS nil@nil
+POPS TF@_newInput
+JUMP &if-end-2
+LABEL &if-else-2
+PUSHS string@Spatne\032zadana\032posloupnost,\032zkuste\032znovu:\010
+POPS GF@retval
+WRITE GF@retval
+PUSHS TF@_all
+POPS GF@retval
+MOVE TF@%1 GF@retval
+PUSHS TF@_inpOK
+POPS GF@retval
+CONCAT GF@retval TF@%1 GF@retval
+PUSHS GF@retval
+POPS TF@_all
+READ GF@retval string
+PUSHS GF@retval
+POPS TF@_newInput
+LABEL &if-end-2
+JUMP &while-cond-1
+LABEL &while-end-1
+JUMP $$end
+
+LABEL $$end
+

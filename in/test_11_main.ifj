@@ -1,0 +1,1 @@
+const ifj = @import("ifj24.zig");
