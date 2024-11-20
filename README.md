@@ -105,3 +105,8 @@ projekt/
 │   └── *.exit           # Očakávané návratové kódy
 └── test.sh              # Testovací skript
 ```
+
+## Autory
+
+- Filip Novák [@fifixsandy] (https://github.com/fifixsandy)
+- Ján Skovajsa [@jansko03]
