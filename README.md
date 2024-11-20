@@ -92,7 +92,7 @@ Kde * je číslo vstupu s ktorým chceš porovnávať výstup (len v prípade, �
 
 
 ```
-projekt/
+IFJ24-tests/
 ├── in/                  # Adresár so vstupnými súbormi
 │   ├── *.ifj            # Zdrojové súbory kódu
 │   ├── *.in*            # Vstupné súbory pre testy
