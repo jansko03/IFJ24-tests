@@ -45,7 +45,11 @@ projekt/
 
 ```bash
 cd projekt/
+```
+```bash
 chmod +x ./IFJ24-tests-master/test.sh
+```
+```bash
 ./IFJ24-tests-master/test.sh ./tests compiler ic24int
 ```
 ## Pridanie vlastného testu
