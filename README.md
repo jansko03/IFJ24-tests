@@ -2,6 +2,7 @@
 # IFJ Testovací Skript
 
 Tento skript automatizuje proces testovania IFJ kompilátora a interpretu. Kompiluje zdrojové súbory .ifj, spúšťa vygenerovaný kód cez interpret s rôznymi vstupnými súbormi a porovnáva výsledky s referenčnými výstupmi.
+Niektoré testy počítajú s implementácou rozšírenia FUNEXP. Tieto testy by mali byť označené FUNEXP. Ak nájdete nejaký neoznačený test, napíšte nám/pull request.
 
 
 
