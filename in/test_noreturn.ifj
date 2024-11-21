@@ -5,5 +5,5 @@ pub fn func() i32{
 }
 
 pub fn main() void{
-    _ = func(5);
+    _ = func();
 }
