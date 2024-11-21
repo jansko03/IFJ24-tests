@@ -1,0 +1,11 @@
+const ifj = @import("ifj24.zig");
+
+
+
+pub fn main() void{
+    const a : i32 = 5;
+    var   b : f64 = ifj.readf64();
+    const ab : f64 = a + b;
+    ifj.write(ab);
+    b = 5.2;
+}
