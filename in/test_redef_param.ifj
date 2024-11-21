@@ -1,9 +1,9 @@
 const ifj = @import("ifj24.zig");
 
 pub fn func(x : i32, x : i32) i32{
-    return 5;
+    return x;
 }
 
 pub fn main() void{
-    const a = func(5, 5);
+    _ = func(5, 5);
 }
