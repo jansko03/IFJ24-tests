@@ -93,7 +93,8 @@ pub fn factorial(n: i32) i32 {
     if (n <= 1){
       return 1;
     }
-    else{} 
-    const a = factorial(n - 1);
+    else{}
+    const n_ = n - 1; 
+    const a = factorial(n_);
     return n * a;
 }
