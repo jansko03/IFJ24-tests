@@ -1,0 +1,10 @@
+Starting complex program with nullable handling, recursion, and nested conditions.
+Nullable a is null, but b is not null: 10
+Sum of a and b: 10
+x is greater than y
+x is even
+Enter numbers to sum (0 to stop):
+Invalid input, try again.
+Total sum: 15
+Enter hello : Correct string entered!
+Program completed successfully.
