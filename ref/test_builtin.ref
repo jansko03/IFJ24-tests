@@ -1,0 +1,11 @@
+Enter a string: You entered the string: ahoj
+Enter an integer: You entered the integer: 5
+Converted integer to float: 0x1.4p2
+Enter a floating-point number: You entered the float: 0x1.6666666666666p2
+Converted float to integer: 5
+Concatenated string: Hello, World!
+Length of concatenated string: 13
+Substring (first 5 chars): Hello
+String comparison result (str1 vs str2): 1
+Ordinal value of 2nd character in concatenated string: 101
+Character created from ordinal value: e

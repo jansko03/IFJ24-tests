@@ -1,0 +1,9 @@
+Enter a string: Error: Invalid string input.
+Enter an integer: Error: Invalid integer input.
+Enter a floating-point number: Error: Invalid floating-point input.
+Concatenated string: Hello, World!
+Length of concatenated string: 13
+Substring (first 5 chars): Hello
+String comparison result (str1 vs str2): 1
+Ordinal value of 2nd character in concatenated string: 101
+Character created from ordinal value: e
