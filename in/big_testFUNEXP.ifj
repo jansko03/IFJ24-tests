@@ -49,12 +49,12 @@ pub fn main() void {
     var sum: i32 = 0;
     ifj.write("Zadajte cisla na scitanie (0 ukonci vstup):\n");
     
-    var break: i32 = 1;
-    while (break != 0) {
+    var brk: i32 = 1;
+    while (brk != 0) {
         const input = ifj.readi32();
         if (input) |num| {
             if (num == 0){
-              break = 0;
+              brk = 0;
             }
             else{
               sum = sum + num;
