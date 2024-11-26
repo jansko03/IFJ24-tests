@@ -15,10 +15,10 @@ pub fn main() void {
     const lightY: f64 = 10.0;
 
     // Initialize loop variables
-    var y: f64 = (0-1) * viewportHeight / 2;
+    var y: f64 = (0.0-1.0) * viewportHeight / 2.0;
 
-    while (y <= viewportHeight / 2) {
-        var x: f64 = (0-1) * viewportWidth / 2.0;
+    while (y <= viewportHeight / 2.0) {
+        var x: f64 = (0.0-1.0) * viewportWidth / 2.0;
 
         while (x <= viewportWidth / 2) {
             // Calculate ray direction
@@ -40,12 +40,12 @@ pub fn main() void {
                 const input : f64 = (lx * lx) + (ly * ly);
                 const lenL: f64 = sqrt(input);
 
-                if (lenL > 0.0) {
+                if (lenL > 0) {
                     const normLx: f64 = lx / lenL;
                     const normLy: f64 = ly / lenL;
                     const dot: f64 = (nx * normLx) + (ny * normLy);
 
-                    if (dot > 0.0) {
+                    if (dot > 0) {
                         ifj.write("*"); // Bright pixel
                     } else {
                         ifj.write("."); // Dim pixel
