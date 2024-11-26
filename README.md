@@ -1,4 +1,4 @@
-#⚠️**POZOR NA TESTY test_retype_i32 A test_retype_bad**⚠️
+# ⚠️**POZOR NA TESTY test_retype_i32 A test_retype_bad**⚠️
 
 Testy sa od **26.11.2024** riadia podľa tejto správy:
 Platí to, co je v zadání a speciálně zde na fóru. https://moodle.vut.cz/mod/forum/discuss.php?d=4850
