@@ -67,7 +67,7 @@ Pridaj vstup pre svoj program. Ak tvoj program nevyžaduje žiadny vstup, môže
 
 Vstupný súbor by mal byť vo formáte:
 ```
-in/custom_test.ifj
+in/custom_test.in*
 ```
 Kde * je číslo vstupu. Ak chceš program spustiť viac krát s rôznymi vstupmi, použiješ rôzne čísla (napr. custom_test.in1, custom_test.in2, atď.).
 
