@@ -1,3 +1,12 @@
+#⚠️**POZOR NA TESTY test_retype_i32 A test_retype_bad**⚠️
+
+Testy sa od **26.11.2024** riadia podľa tejto správy:
+Platí to, co je v zadání a speciálně zde na fóru. https://moodle.vut.cz/mod/forum/discuss.php?d=4850
+1. vždy se dá impl. převést konstantní výraz f64 s nulovou částí na i32
+2. v op. +, -, * se dá impl. převést *literál* i32 -> f64
+- v op. / ale jde použít jen bod 1)
+3. v relačních op. platí to, co je na fóru
+
 
 # IFJ Testovací Skript
 
