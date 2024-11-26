@@ -1,0 +1,8 @@
+first line
+ second line
+third line
+\n <- this shouldn't be newline
+\x25 <- nor this number
+\" \" " \\ aaa
+
+Normal string
