@@ -20,7 +20,7 @@ pub fn main() void {
     while (y <= viewportHeight / 2.0) {
         var x: f64 = (0.0-1.0) * viewportWidth / 2.0;
 
-        while (x <= viewportWidth / 2) {
+        while (x <= viewportWidth / 2.0) {
             // Calculate ray direction
             const rayX: f64 = x * 1.0; // Convert to f64
             const rayY: f64 = y * 1.0; // Convert to f64
@@ -40,12 +40,12 @@ pub fn main() void {
                 const input : f64 = (lx * lx) + (ly * ly);
                 const lenL: f64 = sqrt(input);
 
-                if (lenL > 0) {
+                if (lenL > 0.0) {
                     const normLx: f64 = lx / lenL;
                     const normLy: f64 = ly / lenL;
                     const dot: f64 = (nx * normLx) + (ny * normLy);
 
-                    if (dot > 0) {
+                    if (dot > 0.0) {
                         ifj.write("*"); // Bright pixel
                     } else {
                         ifj.write("."); // Dim pixel
