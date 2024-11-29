@@ -116,6 +116,10 @@ IFJ24-tests/
 └── test.sh              # Testovací skript
 ```
 
+## Prispeli
+- tiquis0290
+- Sigull
+
 ## Autori
 
 - Filip Novák [@fifixsandy] (https://github.com/fifixsandy)
