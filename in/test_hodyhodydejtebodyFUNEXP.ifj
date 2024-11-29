@@ -30,7 +30,7 @@ pub fn complexMathOperations(start: i32) i32 {
 }
 
 pub fn complexStringOperations() []u8 {
-    const base = "HODY HODY DEJTE BODY KDYZ NEDATE PLNY POCET DEJTE ASPON NA ZAPOCET. ";
+    const base = ifj.string("HODY HODY DEJTE BODY KDYZ NEDATE PLNY POCET DEJTE ASPON NA ZAPOCET. ");
     var result = ifj.string(base);
 
     var i: i32 = 0;
